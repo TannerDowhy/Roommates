@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_options"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.dowhy_ehry.roommates.Options">
+
+    <TextView
+        android:text="Welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:id="@+id/WelcomeTxt"
+        android:textAppearance="@android:style/TextAppearance.Material.Display2" />
+
+    <TextView
+        android:text="Please select an option\nbelow:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/WelcomeTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:textAlignment="center"
+        android:id="@+id/InstructionTxt"
+        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+    <!--<Button-->
+        <!--android:text="Join Home"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/JoinHomeBtn"-->
+        <!--style="@android:style/Widget.Holo.Button"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignLeft="@+id/CreateHomeBtn"-->
+        <!--android:layout_alignStart="@+id/CreateHomeBtn"-->
+        <!--android:layout_marginBottom="36dp"-->
+        <!--android:layout_alignRight="@+id/CreateHomeBtn"-->
+        <!--android:layout_alignEnd="@+id/CreateHomeBtn"/>-->
+
+    <Button
+        android:text="Create Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_add_room"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp"/>
+        <!--android:layout_alignBottom="@+id/JoinHomeBtn"-->
+
+</RelativeLayout>
