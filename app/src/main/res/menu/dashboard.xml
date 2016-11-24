@@ -2,8 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_logOut"
         android:orderInCategory="100"
         android:title="@string/action_logOut"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_moveOut"
+        android:orderInCategory="100"
+        android:title="@string/action_moveOut"
+        android:textColor="@color/SignOutRed"
         app:showAsAction="never" />
 </menu>

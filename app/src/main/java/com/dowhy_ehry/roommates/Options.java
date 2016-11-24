@@ -49,13 +49,13 @@ public class Options extends AppCompatActivity {
                 db_ref.child("room").child(mRoomID).updateChildren(map);
                 db_ref.child("room").child(mRoomID).updateChildren(map2);
 
-                goToCreateHome();
+                goToDashboard();
             }
         });
     }
 
-    public void goToCreateHome() {
-        Intent intent = new Intent(this,CreateHome.class);
+    public void goToDashboard() {
+        Intent intent = new Intent(this,Dashboard.class);
         startActivity(intent);
     }
 
