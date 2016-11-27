@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_abill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:screenOrientation="portrait"
+    tools:context="com.dowhy_ehry.roommates.AddABill">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:layout_marginTop="13dp"
+        android:id="@+id/amount_txt"
+        android:hint="Amount"
+        android:layout_below="@+id/descr_txt"
+        android:layout_alignLeft="@+id/descr_txt"
+        android:layout_alignStart="@+id/descr_txt" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Description"
+        android:ems="10"
+        android:id="@+id/descr_txt"
+        android:hint="Description"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="97dp" />
+
+    <TextView
+        android:text="Share With:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sharewith_txt"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/amount_txt"
+        android:layout_alignStart="@+id/amount_txt" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bill_spinner"
+        android:prompt="@string/bill_prompt"
+        android:entries="@array/bill_spinner"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/sharewith_txt"
+        android:layout_alignLeft="@+id/sharewith_txt"
+        android:layout_alignStart="@+id/sharewith_txt"
+        android:layout_alignRight="@+id/amount_txt"
+        android:layout_alignEnd="@+id/amount_txt" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/add_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_delete"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/delete_btn" />
+
+    <TextView
+        android:text="Add a Pic of Bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/bill_spinner"
+        android:layout_alignLeft="@+id/bill_spinner"
+        android:layout_alignStart="@+id/bill_spinner"
+        android:layout_marginTop="13dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_menu_camera"
+        android:id="@+id/add_image_btn"
+        android:elevation="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+</RelativeLayout>
