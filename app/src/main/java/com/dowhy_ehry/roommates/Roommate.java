@@ -8,9 +8,11 @@ public class Roommate {
 
     private String displayName;
     private String photoURL;
-    private Room currRoom;
+    private String currRoom;
+//    private Room currRoom;
 
-    public Roommate(Room currRoom, String photoURL, String displayName){
+    public Roommate(String currRoom, String photoURL, String displayName){
+        setCurrRoom(currRoom);
         setPhotoURL(photoURL);
         setDisplayName(displayName);
     }
@@ -23,6 +25,10 @@ public class Roommate {
         return photoURL;
     }
 
+    public String getCurrRoom() {
+        return currRoom;
+    }
+
     public void setDisplayName(String displayName) {
         this.displayName = displayName;
     }
@@ -31,7 +37,7 @@ public class Roommate {
         this.photoURL = photoURL;
     }
 
-    public void setCurrRoom (Room currRoom) {
+    public void setCurrRoom (String currRoom) {
         this.currRoom = currRoom;
     }
 }

@@ -50,8 +50,31 @@
         android:layout_height="wrap_content"
         android:id="@+id/btn_add_room"
         style="@android:style/Widget.Holo.Button"
+        android:layout_below="@+id/InstructionTxt"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="69dp"/>
-        <!--android:layout_alignBottom="@+id/JoinHomeBtn"-->
+        android:layout_marginTop="22dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Join Room"
+        android:ems="10"
+        android:layout_below="@+id/btn_add_room"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="49dp"
+        android:id="@+id/in_join_room" />
+
+    <Button
+        android:text="Join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_room"
+        android:layout_alignTop="@+id/in_join_room"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <!--android:layout_alignBottom="@+id/JoinHomeBtn"-->
 
 </RelativeLayout>

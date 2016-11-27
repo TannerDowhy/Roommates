@@ -7,11 +7,11 @@ package com.dowhy_ehry.roommates;
 public class Room {
     private int occupants = 1;
 
-
-    public Room() {
-    }
-
     public int getOccupants() {
         return occupants;
+    }
+
+    public void incrementOccupants() {
+        occupants += 1;
     }
 }
