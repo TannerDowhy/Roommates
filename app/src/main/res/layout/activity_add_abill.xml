@@ -28,7 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Description"
         android:ems="10"
         android:id="@+id/descr_txt"
         android:hint="Description"
@@ -76,24 +75,24 @@
         android:layout_alignParentStart="true"
         android:id="@+id/delete_btn" />
 
-    <TextView
-        android:text="Add a Pic of Bill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/bill_spinner"
-        android:layout_alignLeft="@+id/bill_spinner"
-        android:layout_alignStart="@+id/bill_spinner"
-        android:layout_marginTop="13dp" />
+    <!--<TextView-->
+        <!--android:text="Add a Pic of Bill"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/textView4"-->
+        <!--android:layout_below="@+id/bill_spinner"-->
+        <!--android:layout_alignLeft="@+id/bill_spinner"-->
+        <!--android:layout_alignStart="@+id/bill_spinner"-->
+        <!--android:layout_marginTop="13dp" />-->
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_menu_camera"
-        android:id="@+id/add_image_btn"
-        android:elevation="0dp"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/textView4"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignStart="@+id/textView4" />
+    <!--<ImageButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:srcCompat="@drawable/ic_menu_camera"-->
+        <!--android:id="@+id/add_image_btn"-->
+        <!--android:elevation="0dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:layout_below="@+id/textView4"-->
+        <!--android:layout_alignLeft="@+id/textView4"-->
+        <!--android:layout_alignStart="@+id/textView4" />-->
 </RelativeLayout>

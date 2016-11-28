@@ -1,23 +1,20 @@
 package com.dowhy_ehry.roommates;
 
 /**
- * Created by tannerdowhy on 2016-11-19.
+ * Created by tannerdowhy on 2016-11-27.
  */
 
-public class Roommate {
-
+public class Person {
     private String displayName;
     private String photoURL;
     private String currRoom;
     private String email;
-//    private Room currRoom;
 
-    public Roommate(String currRoom, String photoURL, String displayName, String email){
+    public Person(String currRoom, String photoURL, String displayName, String email){
         setCurrRoom(currRoom);
         setPhotoURL(photoURL);
         setDisplayName(displayName);
         setEmail(email);
-
     }
 
     public String getDisplayName() {

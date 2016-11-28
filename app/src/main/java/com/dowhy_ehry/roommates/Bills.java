@@ -11,16 +11,19 @@ public class Bills {
     private String name;
     private float amount;
     private ImageView billPic;
+    private boolean split;
 
-    public Bills(String nName, float nAmount){
+    public Bills(String nName, float nAmount, boolean b){
         setName(nName);
         setAmount(nAmount);
+        setSplit(b);
     }
 
-    public Bills(String nName, float nAmount, ImageView nImage){
+    public Bills(String nName, float nAmount, ImageView nImage, boolean b){
         setName(nName);
         setAmount(nAmount);
         setBillPic(nImage);
+        setSplit(b);
     }
 
     public String getName(){
@@ -45,6 +48,14 @@ public class Bills {
 
     public void setBillPic(ImageView nPic){
         this.billPic = nPic;
+    }
+
+    public boolean getSplit(){
+        return this.split;
+    }
+
+    public void setSplit(boolean b){
+        this.split = b;
     }
 
 

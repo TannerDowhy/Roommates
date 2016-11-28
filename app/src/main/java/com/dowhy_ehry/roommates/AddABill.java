@@ -1,11 +1,20 @@
 package com.dowhy_ehry.roommates;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.media.Image;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Spinner;
+
+import java.io.File;
 
 public class AddABill extends AppCompatActivity {
 
@@ -13,7 +22,12 @@ public class AddABill extends AppCompatActivity {
     private ImageButton add_btn;
     private ImageButton addPic_btn;
     private Bills newBill;
-    private int i;
+    private ImageView picTaken;
+    private static final int CAM_REQUEST = 1313;
+    private EditText bDesc;
+    private EditText bAmount;
+    private String bSplitTxt;
+    private boolean bSplit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,46 +36,64 @@ public class AddABill extends AppCompatActivity {
 
         close_btn = (ImageButton) findViewById(R.id.delete_btn);
         add_btn =  (ImageButton) findViewById(R.id.add_btn);
-        addPic_btn = (ImageButton) findViewById(R.id.add_image_btn);
+        //addPic_btn = (ImageButton) findViewById(R.id.add_image_btn);
 
-        i = 0;
+        bDesc = (EditText) findViewById(R.id.descr_txt);
+
+        bAmount = (EditText) findViewById(R.id.amount_txt);
+
+
+        final Spinner spinnerSplit = (Spinner) findViewById(R.id.bill_spinner);
+
 
         close_btn.setOnClickListener(new View.OnClickListener(){
             @Override
-          public void onClick(View view) {
+            public void onClick(View view) {
                 finish(); //End Activity
             }
         });
-
-
 
         add_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                //TODO
+                String bDescTxt = bDesc.getText().toString();
+                String bAmountTxt = bAmount.getText().toString();
+                float bAmountNum = Float.parseFloat(bAmountTxt);
+                bSplitTxt = spinnerSplit.getSelectedItem().toString();
+
+
+                //String nName, float nAmount, boolean b
+                if (bSplitTxt.equals("All Roommates")){
+                    bSplit = true;
+                }else{
+                    //No One
+                    bSplit = false;
+                }
+
+                newBill = new Bills(bDescTxt, bAmountNum, bSplit);
+                finish();
             }
         });
 
-
-
-
-
-//        add_room.setOnClickListener(new View.OnClickListener() {
+//        addPic_btn.setOnClickListener(new View.OnClickListener(){
 //            @Override
 //            public void onClick(View view) {
-//                Room room = new Room();
-//                Roommate roommate = new Roommate(room, mAuth.getCurrentUser().getPhotoUrl()
-//                        .toString(), mAuth.getCurrentUser().getDisplayName());
-//                Map<String,Object> map = new HashMap<String, Object>();
-//                Map<String,Object> map2 = new HashMap<String, Object>();
-//                map2.put("Occupant"+room.getOccupants(), roommate.getDisplayName());
-//                db_ref.child("room").child(mRoomID).updateChildren(map);
-//                db_ref.child("room").child(mRoomID).updateChildren(map2);
+//                //TODO
 //
-//                goToDashboard();
 //            }
 //        });
 
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == CAM_REQUEST){
+            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+            picTaken.setImageBitmap(thumbnail);
+        }
     }
 }
