@@ -38,6 +38,8 @@ import com.google.firebase.auth.FirebaseUser;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Dashboard extends AppCompatActivity
@@ -51,7 +53,7 @@ public class Dashboard extends AppCompatActivity
     //google api client
     private GoogleApiClient mGoogleApiClient;
     private static final int RC_SIGN_IN = 0;
-    private Button move_out_btn;
+    private Button btn_sms;
     private Button log_out_btn;
     private FirebaseAuth mAuth;
     private FirebaseAuth mAuthListener;
@@ -86,7 +88,14 @@ public class Dashboard extends AppCompatActivity
 
 
         log_out_btn = (Button) findViewById(R.id.action_logOut);
-        move_out_btn = (Button) findViewById(R.id.action_moveOut);
+        btn_sms = (Button) findViewById(R.id.btn_sms_share);
+
+        btn_sms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendSMS(view);
+            }
+        });
 
     }
 
@@ -209,5 +218,16 @@ public class Dashboard extends AppCompatActivity
 
 
         return true;
+    }
+
+    public void sendSMS(View v)
+    {
+        Bundle bundle = getIntent().getExtras();
+        String newString = bundle.getString("room_name");
+        String SMSBodyText = "Hello! You've been invited to join a Home in Roommates! Please enter the code below to join your new roommates.\n" + newString;
+
+        Intent message = new Intent( Intent.ACTION_VIEW, Uri.parse( "sms:" + "" ) );
+        message.putExtra( "sms_body", SMSBodyText );
+        startActivity(message);
     }
 }

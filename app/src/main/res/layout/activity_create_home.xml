@@ -38,17 +38,17 @@
         android:id="@+id/ContinueBtn"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp"
-        android:layout_alignLeft="@+id/SmsShareBtn"
-        android:layout_alignStart="@+id/SmsShareBtn"
-        android:layout_alignRight="@+id/SmsShareBtn"
-        android:layout_alignEnd="@+id/SmsShareBtn"
+        android:layout_alignLeft="@+id/btn_sms_share"
+        android:layout_alignStart="@+id/btn_sms_share"
+        android:layout_alignRight="@+id/btn_sms_share"
+        android:layout_alignEnd="@+id/btn_sms_share"
         android:onClick="goToChat" />
 
     <Button
         android:text="Share via SMS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/SmsShareBtn"
+        android:id="@+id/btn_sms_share"
         android:layout_alignBottom="@+id/ContinueBtn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="65dp"

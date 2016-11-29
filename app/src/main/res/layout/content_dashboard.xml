@@ -17,7 +17,7 @@
         android:text="Share via SMS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/SmsShareBtn"
+        android:id="@+id/btn_sms_share"
         android:layout_marginBottom="21dp"
         android:onClick="SmsShare"
         android:layout_alignParentBottom="true"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/HomeCodeTxt"
         android:textAppearance="@android:style/TextAppearance.Material.Display3"
-        android:layout_above="@+id/SmsShareBtn"
+        android:layout_above="@+id/btn_sms_share"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp" />
 
