@@ -205,8 +205,12 @@ public class Dashboard extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_roommateagreement) {
+            intent = new Intent(this, RoommateAgreenent.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_roommates) {
+            intent = new Intent(this, RoommatesView.class);
+            startActivity(intent);
 
         }
 
